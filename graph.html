@@ -1,0 +1,68 @@
+<script  src="{{ url_for('static', filename='css/tail.css') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+<h1 class="xl:text-5xl md:text-4xl text-2xl font-semibold leading-tight text-center text-gray-800 sm:mb-0 mb-12">
+            Data shown in Graph <br class="md:block hidden" />
+        
+        </h1>
+        <canvas id="lineChart" width="900" height="400"></canvas>
+        <script >
+            var ctx=document.getElementById("lineChart").getContext("2d");
+            var lineChart=new Chart(ctx,{
+                type: 'line',
+                  data: {labels: {{label | safe}},
+    datasets: [{ 
+        data: {{age | safe}},
+        label: "Data Points",
+        borderColor: "#3e95cd",
+        fill: false}]
+      }
+            })
+        </script>
+        <!-- <canvas id="lineChart1" width="900" height="400"></canvas>
+        <script >
+            var ctx=document.getElementById("lineChart1").getContext("2d");
+            var lineChart=new Chart(ctx,{
+                type: 'line',
+                  data: {labels: {{label | safe}},
+    datasets: [{ 
+        data: {{married | safe}},
+        label: "Data Points",
+        borderColor: "#3e95cd",
+        fill: false}]
+      }
+            })
+        </script>
+        <canvas id="lineChart2" width="900" height="400"></canvas>
+        <script >
+            var ctx=document.getElementById("lineChart2").getContext("2d");
+            var lineChart=new Chart(ctx,{
+                type: 'line',
+                  data: {labels: {{age | safe}},
+    datasets: [{ 
+        data: {{arrears | safe}},
+        label: "Data Points",
+        borderColor: "#3e95cd",
+        fill: false}]
+      }
+            })
+        </script>
+        <canvas id="lineChart3" width="900" height="400"></canvas>
+        <script >
+            var ctx=document.getElementById("lineChart3").getContext("2d");
+            var lineChart=new Chart(ctx,{
+                type: 'line',
+                  data: {labels: {{age | safe}},
+    datasets: [{ 
+        data: {{education | safe}},
+        label: "Data Points",
+        borderColor: "#3e95cd",
+        fill: false}]
+      }
+            })
+        </script> -->
+        <div class="md:mt-14 mt-4 relative sm:flex items-center justify-center">
+            <img src="https://i.ibb.co/KjrPCyW/map.png" alt="world map image" class="w-full xl:h-full h-96 object-cover object-fill sm:block hidden" />
+            
+
+            
+        </div>
